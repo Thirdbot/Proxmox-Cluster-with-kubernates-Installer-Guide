@@ -33,5 +33,5 @@
         rm /etc/pve/corosync.conf
         killall pmxcfs
         systemctl restart pve-cluster
-  ### 2.2 recreating a cluster
-      follow Set up Cluster
+  ### 2.2 recreating a cluster or adding nodes
+        follow Set up Cluster or pvecm add ip.ip.ip.1
