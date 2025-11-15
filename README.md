@@ -4,7 +4,7 @@
     1.ArgoCD for gitops ci/cd through git repository
     2.pulse proxmox for proxmox cluster configuration and monitoring
     3.Portainer a container management for kubernates
-    3.homepage for monitoring all application (All above)
+    4.homepage for monitoring all application (All above)
 ### kubernates set up from this tutorial.
     https://www.youtube.com/watch?v=mNp_9iMIqH0&list=LL&index=6
 ### Set up Clusters
