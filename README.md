@@ -1,6 +1,12 @@
 # Proxmox-Cluster-with-kubernates-Installer-Guide
 ## This guide made for set up a Proxmox to run clusters of kubernates services for workflow
-
+## Application
+    1.ArgoCD for gitops ci/cd through git repository
+    2.pulse proxmox for proxmox cluster configuration and monitoring
+    3.Portainer a container management for kubernates
+    3.homepage for monitoring all application (All above)
+### kubernates set up from this tutorial.
+    https://www.youtube.com/watch?v=mNp_9iMIqH0&list=LL&index=6
 ### Set up Clusters
     1. Install proxmox via proxmox installer here-> https://www.proxmox.com/en/products/proxmox-virtual-environment/get-started on machine or virtual machine.
     2. After installation done. Set up a credential.
