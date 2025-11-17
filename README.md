@@ -41,3 +41,7 @@
         systemctl restart pve-cluster
   ### 2.2 recreating a cluster or adding nodes
         follow Set up Cluster or pvecm add ip.ip.ip.1
+## 3. using virtual box on ubuntu
+    ### cant operate on vmx root mode
+        sudo rmmod kvm kvm_intel #if intel
+        sudo rmmod kvm_amd kvm #if amd
