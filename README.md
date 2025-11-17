@@ -45,3 +45,6 @@
     ### cant operate on vmx root mode
         sudo rmmod kvm kvm_intel #if intel
         sudo rmmod kvm_amd kvm #if amd
+    ### cant connect to ip
+        choose bridge network in virtual box
+        check ip to be 192.168.x.x
