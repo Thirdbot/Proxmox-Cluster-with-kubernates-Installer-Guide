@@ -8,6 +8,7 @@
 ### kubernates set up from this tutorial.
     https://www.youtube.com/watch?v=mNp_9iMIqH0&list=LL&index=6
 ### Set up Clusters
+#### if you dont have a router avalible. pls use a bridge adapter to convert wifi to ethernet. then access it to same network.
     1. Install proxmox via proxmox installer here-> https://www.proxmox.com/en/products/proxmox-virtual-environment/get-started on machine or virtual machine.
     2. After installation done. Set up a credential.
     3. Open up machines IP and Login.
@@ -48,3 +49,9 @@
     ### cant connect to ip
         choose bridge network in virtual box
         check ip to be 192.168.x.x
+
+##After Installation
+    ### Install pve post installer from
+        https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install
+        with shell setting things up and then click upgrade in repository pages.
+        
