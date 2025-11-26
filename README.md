@@ -63,6 +63,12 @@
      1. Download or Upload Truenas
      2. Create a vm with cpu type kvm64
      3. Setup Truenas (root name is truenas_admin)
+### adding pool (if topology error happening)
+    1. go to proxmox machine's shell
+    2. lsblk -o +MODEL,SERIAL
+    3. ls /dev/disk/by-id
+    4. find your disk name and copy that name start with ata
+    5. qm set {vm's id} -scsi{id} /dev/disk/{copy}
 
 
         
