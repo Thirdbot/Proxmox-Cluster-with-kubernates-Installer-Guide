@@ -58,6 +58,6 @@
 #Install Truenas
 ## 1. Download or Upload Truenas
 ## 2. Create a vm with cpu type kvm64
-## 3. Setup Truenas
+## 3. Setup Truenas (root name is truenas_admin)
 
         
