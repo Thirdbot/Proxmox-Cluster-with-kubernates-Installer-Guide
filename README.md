@@ -19,7 +19,7 @@
 
 ## Problem that might be occurs.
 ## 1. join failed due to existed files or same node's name
-       1.1 exited files
+      1.1 exited files
         1. Go to datacenter's pve and select shell to get into console or ssh into with an ip
         2. Get to /etc/pve/qemu-server and delete files or copy it to external source (as long as there is nothing in qemu-server) later, copy it back to same place /etc/pve/qemu-server
         3. Re-join the cluster using join information
@@ -30,7 +30,7 @@
         4. refresh webpages and Re-Login
 
 ## 2. finger printed is not verified
-  ### 2.1 remove Cluster Node
+    2.1 remove Cluster Node
         systemctl stop pve-cluster corosync
         pmxcfs -l
         rm -fR /etc/corosync/*
@@ -38,7 +38,7 @@
         rm /etc/pve/corosync.conf
         killall pmxcfs
         systemctl restart pve-cluster
-  ### 2.2 recreating a cluster or adding nodes
+    2.2 recreating a cluster or adding nodes
         follow Set up Cluster or pvecm add ip.ip.ip.1
 ## 3. using virtual box on ubuntu
     cant operate on vmx root mode
@@ -48,18 +48,18 @@
         choose bridge network in virtual box
         check ip to be 192.168.x.x
 
-##After Installation
+## After Installation
     Install pve post installer from
         https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install
         with shell setting things up and then click upgrade in repository pages.
         
-##Enable IOMMU PCI passthrough for visibility of disk
+## Enable IOMMU PCI passthrough for visibility of disk
     go to /etc/default/grub
     paste GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
     save and reboot
     then check with dmesg | grep -e DMAR -e IOMMU -e AMD-Vi
     
-##Install Truenas
+## Install Truenas
      1. Download or Upload Truenas
      2. Create a vm with cpu type kvm64
      3. Setup Truenas (root name is truenas_admin)
