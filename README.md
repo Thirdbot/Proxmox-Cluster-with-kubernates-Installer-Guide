@@ -5,9 +5,8 @@
     2.pulse proxmox for proxmox cluster configuration and monitoring
     3.Portainer a container management for kubernates
     4.homepage for monitoring all application (All above)
-### kubernates set up from this tutorial. https://www.youtube.com/watch?v=mNp_9iMIqH0&list=LL&index=6
-### Set up Clusters
-#### if you dont have a router avalible. pls use a bridge adapter to convert wifi to ethernet. then access it to same network.
+## kubernates set up from this tutorial. https://www.youtube.com/watch?v=mNp_9iMIqH0&list=LL&index=6
+## Set up Clusters if you dont have a router avalible. pls use a bridge adapter to convert wifi to ethernet. then access it to same network.
     1. Install proxmox via proxmox installer here-> https://www.proxmox.com/en/products/proxmox-virtual-environment/get-started on machine or virtual machine.
     2. After installation done. Set up a credential.
     3. Open up machines IP and Login.
@@ -20,11 +19,11 @@
 
 #Problem that might be occurs.
 ## 1. join failed due to existed files or same node's name
-  ### 1.1 exited files
+   1.1 exited files
         1. Go to datacenter's pve and select shell to get into console or ssh into with an ip
         2. Get to /etc/pve/qemu-server and delete files or copy it to external source (as long as there is nothing in qemu-server) later, copy it back to same place /etc/pve/qemu-server
         3. Re-join the cluster using join information
-  ### 1.2 same node's name
+  1.2 same node's name
         1. Go to datacenter's pve and select shell to get into console or ssh into with an ip
         2. nano /etc/hosts and nano /etc/hostname then change the name you see into name you prefer then save
         3. reboot
