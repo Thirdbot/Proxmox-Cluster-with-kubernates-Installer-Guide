@@ -43,21 +43,27 @@
   ### 2.2 recreating a cluster or adding nodes
         follow Set up Cluster or pvecm add ip.ip.ip.1
 ## 3. using virtual box on ubuntu
-    ### cant operate on vmx root mode
+    cant operate on vmx root mode
         sudo rmmod kvm kvm_intel #if intel
         sudo rmmod kvm_amd kvm #if amd
-    ### cant connect to ip
+    cant connect to ip
         choose bridge network in virtual box
         check ip to be 192.168.x.x
 
-##After Installation
-    ### Install pve post installer from
+#After Installation
+    Install pve post installer from
         https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install
         with shell setting things up and then click upgrade in repository pages.
-
+#Enable IOMMU PCI passthrough for visibility of disk
+    go to /etc/default/grub
+    paste GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
+    save and reboot
+    then check with dmesg | grep -e DMAR -e IOMMU -e AMD-Vi
+    
 #Install Truenas
-## 1. Download or Upload Truenas
-## 2. Create a vm with cpu type kvm64
-## 3. Setup Truenas (root name is truenas_admin)
+     1. Download or Upload Truenas
+     2. Create a vm with cpu type kvm64
+     3. Setup Truenas (root name is truenas_admin)
+
 
         
