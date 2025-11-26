@@ -54,4 +54,10 @@
     ### Install pve post installer from
         https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install
         with shell setting things up and then click upgrade in repository pages.
+
+#Install Truenas
+## 1. Download or Upload Truenas
+## 2. Create a vm with cpu type kvm64
+## 3. Setup Truenas
+
         
