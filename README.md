@@ -17,13 +17,13 @@
     8. Refresh web pages and Re-Login
 
 
-#Problem that might be occurs.
+## Problem that might be occurs.
 ## 1. join failed due to existed files or same node's name
-   1.1 exited files
+       1.1 exited files
         1. Go to datacenter's pve and select shell to get into console or ssh into with an ip
         2. Get to /etc/pve/qemu-server and delete files or copy it to external source (as long as there is nothing in qemu-server) later, copy it back to same place /etc/pve/qemu-server
         3. Re-join the cluster using join information
-  1.2 same node's name
+      1.2 same node's name
         1. Go to datacenter's pve and select shell to get into console or ssh into with an ip
         2. nano /etc/hosts and nano /etc/hostname then change the name you see into name you prefer then save
         3. reboot
