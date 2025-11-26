@@ -49,17 +49,18 @@
         choose bridge network in virtual box
         check ip to be 192.168.x.x
 
-#After Installation
+##After Installation
     Install pve post installer from
         https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install
         with shell setting things up and then click upgrade in repository pages.
-#Enable IOMMU PCI passthrough for visibility of disk
+        
+##Enable IOMMU PCI passthrough for visibility of disk
     go to /etc/default/grub
     paste GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
     save and reboot
     then check with dmesg | grep -e DMAR -e IOMMU -e AMD-Vi
     
-#Install Truenas
+##Install Truenas
      1. Download or Upload Truenas
      2. Create a vm with cpu type kvm64
      3. Setup Truenas (root name is truenas_admin)
