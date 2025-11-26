@@ -5,8 +5,7 @@
     2.pulse proxmox for proxmox cluster configuration and monitoring
     3.Portainer a container management for kubernates
     4.homepage for monitoring all application (All above)
-### kubernates set up from this tutorial.
-    https://www.youtube.com/watch?v=mNp_9iMIqH0&list=LL&index=6
+### kubernates set up from this tutorial. https://www.youtube.com/watch?v=mNp_9iMIqH0&list=LL&index=6
 ### Set up Clusters
 #### if you dont have a router avalible. pls use a bridge adapter to convert wifi to ethernet. then access it to same network.
     1. Install proxmox via proxmox installer here-> https://www.proxmox.com/en/products/proxmox-virtual-environment/get-started on machine or virtual machine.
