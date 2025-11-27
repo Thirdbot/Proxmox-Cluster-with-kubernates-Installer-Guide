@@ -88,6 +88,9 @@
     3. ls /dev/disk/by-id
     4. find your disk name and copy that name start with ata or dm and copy serial number
     5. qm set 101 -scsi1 /dev/disk/by-id/ata-ST2000LM015-2E8174_ZDZRJEXN,serial=ZDZRJEXN
+## Install debian
+    1. create debian vm
+    2. update packages
 
 
         
