@@ -52,7 +52,27 @@
     Install pve post installer from
         https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install
         with shell setting things up and then click upgrade in repository pages.
+## auto activation of lvm (if after reboot proxmox and vm cant see disk)
+    check activation with lvscan
+    1.nano /etc/systemd/system/lvm-activate.service
+    2. add
+        [Unit]
+        Description=Auto activate LVM volumes after boot
+        DefaultDependencies=no
+        After=local-fs.target
+        Before=proxmox-backup.service pvedaemon.service pve-storage.service
         
+        [Service]
+        Type=oneshot
+        ExecStart=/sbin/vgchange -ay pve
+        
+        [Install]
+        WantedBy=multi-user.target
+    3. save
+    4.  systemctl daemon-reload
+        systemctl enable lvm-activate.service
+    5. systemctl start lvm-activate.service
+
 ## Enable IOMMU PCI passthrough for visibility of disk
     go to /etc/default/grub
     paste GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
