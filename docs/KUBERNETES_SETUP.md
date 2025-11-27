@@ -1,7 +1,19 @@
 # Kubernetes — Deployment and Storage Integration
 
 This document covers recommended Kubernetes deployment strategies on top of Proxmox VMs with TrueNAS providing persistent storage. It provides step-by-step options (kubeadm for upstream k8s or k3s for lightweight), networking/CNI guidance, storage integration, and common troubleshooting.
-
+# first install debian
+  - click https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.2.0-amd64-netinst.iso
+  - create vm in proxmox
+  - install update and upgrade pacakage
+  - install cifs-utils (for smb share)
+  - create directory /mnt/prox-share
+  - sudo nano /etc/fstab (to make endpoint)
+  - //{your smb endpoint} {mount directory} cifs credentials=/root/smbcredentials 0 0
+  - nano /root/smbcredentials
+    user={your user}
+    password={your password}
+    save and exits
+  -  
 Which Kubernetes distribution to use?
 - kubeadm (upstream Kubernetes): full control, production-grade, more configuration.
 - k3s (Rancher): lightweight, simpler for labs and edge clusters.
