@@ -8,12 +8,12 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
   - install cifs-utils (for smb share)
   - create directory /mnt/prox-share
   - sudo nano /etc/fstab (to make endpoint)
-  - //{your smb endpoint} {mount directory} cifs credentials=/root/smbcredentials 0 0
+  - //{your smb endpoint} {mount directory} cifs credentials=/root/smbcredentials uid={your user id} sid={your user id} 0 0
   - nano /root/smbcredentials
     user={your user}
     password={your password}
     save and exits
-  -  
+    
 Which Kubernetes distribution to use?
 - kubeadm (upstream Kubernetes): full control, production-grade, more configuration.
 - k3s (Rancher): lightweight, simpler for labs and edge clusters.
