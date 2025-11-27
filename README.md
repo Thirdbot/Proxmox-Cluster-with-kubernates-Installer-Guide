@@ -58,7 +58,9 @@
     paste GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
     save and reboot
     then check with dmesg | grep -e DMAR -e IOMMU -e AMD-Vi
-    
+## set disk in vm to have unique id
+    ls /dev/disk/by-id
+    qm set 101 -scsi1 /dev/disk/by-id/ata-ST2000LM015-2E8174_ZDZRJEXN,serial=ZDZRJEXN
 ## Install Truenas
      1. Download or Upload Truenas
      2. Create a vm with cpu type kvm64
