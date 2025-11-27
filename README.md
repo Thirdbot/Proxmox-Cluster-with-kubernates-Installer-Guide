@@ -58,7 +58,7 @@
     paste GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
     save and reboot
     then check with dmesg | grep -e DMAR -e IOMMU -e AMD-Vi
-## Install Truenas
+## Install Truenas from https://www.youtube.com/watch?v=_sfddZHhOj4&t=1760s
      1. Download or Upload Truenas
      2. Create a vm with cpu type kvm64
      3. Setup Truenas (root name is truenas_admin)
