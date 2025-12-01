@@ -6,16 +6,16 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
   - create vm in proxmox
   - install update and upgrade pacakage
   - install cifs-utils (for smb share)
-  - create directory /mnt/prox-share
-  - sudo nano /etc/fstab (to make endpoint)
-  - //{your smb endpoint} {mount directory} cifs credentials=/root/smbcredentials uid={your user id} sid={your user id} 0 0
-  - nano /root/smbcredentials
+  ## create directory /mnt/prox-share
+    sudo nano /etc/fstab (to make endpoint)
+    //{your smb endpoint} {mount directory} cifs credentials=/root/smbcredentials uid={your user id} sid={your user id} 0 0
+    nano /root/smbcredentials
     user={your user}
     password={your password}
-    save and exits
+  save and exits
 
 # Docker Installation as lxc
-  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/docker.sh)" in machine's shell
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/docker.sh)" in machine's shell
   - seperate container and template storage location (template in nfs and container in local lvm)
   - done
 # Portainer Installation using docker
@@ -24,24 +24,24 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
 
 # Potential Docker Install Problem
   - Since this run in lxc.There is a Permission Problem ex. sysctl net.ipv4.ip_unprivileged_port_start file: reopen fd 8: permission denied
-  - fixing vm config nano /etc/pve/lxc/<CTID>.conf in machine's shell
-  - add
-  - lxc.apparmor.profile: unconfined
-  - lxc.cgroup2.devices.allow: a
-  - lxc.cap.drop:
+  ## fixing vm config in machine's shell
+    nano /etc/pve/lxc/<CTID>.conf
+  ## add
+    lxc.apparmor.profile: unconfined
+    lxc.cgroup2.devices.allow: a
+    lxc.cap.drop:
   - save and exit
   - reboot vm
   - try docker run hello-word
 
 # Kubernate Installation as lxc
-  - create lxc (unprivillge and swap=0)
-  - set lxc group
-  - nano /etc/pve/lxc/<CTID>.conf in machine's shell
-  - add
-  - lxc.apparmor.profile: unconfined
-  - lxc.cgroup2.devices.allow: a
-  - lxc.cap.drop:
-  - lxc.mount.auto: "proc:rw sys:rw"
+  ## create lxc (unprivillge and swap=0)
+    nano /etc/pve/lxc/<CTID>.conf in machine's shell
+  ## add
+    lxc.apparmor.profile: unconfined
+    lxc.cgroup2.devices.allow: a
+    lxc.cap.drop:
+    lxc.mount.auto: "proc:rw sys:rw" 
   - save and exit
   - reboot lxc
   ## Create /etc/rc.local
@@ -54,7 +54,7 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
     # https://medium.com/@kvaps/run-kubernetes-in-lxc-container-f04aa94b6c9c
     mount --make-rshared /
 
-  - after create then 
+  ### after create then 
     chmod +x /etc/rc.local
     /etc/rc.local
   - reboot lxc
