@@ -44,7 +44,7 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
   - lxc.mount.auto: "proc:rw sys:rw"
   - save and exit
   - reboot lxc
-  - Create /etc/rc.local
+  ## Create /etc/rc.local
     #!/bin/sh -e
     # Kubeadm 1.15 needs /dev/kmsg to be there, but it’s not in lxc, but we can just use /dev/console instead
     # see: https://github.com/kubernetes-sigs/kind/issues/662
@@ -54,7 +54,7 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
     # https://medium.com/@kvaps/run-kubernetes-in-lxc-container-f04aa94b6c9c
     mount --make-rshared /
 
-  -after create then 
+  - after create then 
     chmod +x /etc/rc.local
     /etc/rc.local
   - reboot lxc
