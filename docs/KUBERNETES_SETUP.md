@@ -29,9 +29,6 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
   - lxc.apparmor.profile: unconfined
   - lxc.cgroup2.devices.allow: a
   - lxc.cap.drop:
-  - features: keyctl=1,nesting=1,fuse=1
-  - lxc.mount.auto: "proc:rw sys:rw"
-  - lxc.apparmor.profile: unconfined
   - save and exit
   - reboot vm
   - try docker run hello-word
