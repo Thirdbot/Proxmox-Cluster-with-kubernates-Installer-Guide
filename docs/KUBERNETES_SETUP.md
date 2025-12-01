@@ -23,8 +23,7 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
   or follow this https://docs.portainer.io/start/install-ce/server/docker/linux
 
 # Potential Problem
-  Since this run in lxc.There is a Permission Problem
-  ex. sysctl net.ipv4.ip_unprivileged_port_start file: reopen fd 8: permission denied
+  Since this run in lxc.There is a Permission Problem ex. sysctl net.ipv4.ip_unprivileged_port_start file: reopen fd 8: permission denied
     - fixing vm config nano /etc/pve/lxc/<CTID>.conf in machine's shell
     - add lxc.apparmor.profile: unconfined
           lxc.cgroup2.devices.allow: a
