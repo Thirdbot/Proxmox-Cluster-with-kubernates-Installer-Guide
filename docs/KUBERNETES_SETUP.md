@@ -14,8 +14,8 @@ This document covers recommended Kubernetes deployment strategies on top of Prox
     password={your password}
   save and exits
 
-# Docker Installation as lxc
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/docker.sh)" in machine's shell
+# Docker Installation as lxc in machine's shell
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/docker.sh)"
   - seperate container and template storage location (template in nfs and container in local lvm)
   - done
 # Portainer Installation using docker
