@@ -10,7 +10,7 @@ This top-level README links to three focused guides that walk through installati
 
 - docs/PROXMOX_SETUP.md — Proxmox VE installation, cluster creation, post-install tuning, and common fixes.
 - docs/TRUENAS_SETUP.md — TrueNAS deployment as a VM/physical host, disk passthrough, pool creation and troubleshooting.
-- docs/KUBERNETES_SETUP.md — Kubernetes deployment options (kubeadm / k3s), networking (CNI), storage integration (TrueNAS CSI/NFS), common errors and resolutions.
+- docs/PORTAINER(DOCKER)_SETUP.md — DOCKER deployment options , storage integration (TrueNAS CSI/NFS), common errors and resolutions.
 
 If you are here to follow a full end-to-end setup, read the files in that order: Proxmox → TrueNAS → Kubernetes.
 
