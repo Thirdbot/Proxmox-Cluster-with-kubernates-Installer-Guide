@@ -25,6 +25,8 @@
     # after that run
       terraform validate
       terraform apply
+## Download almalinux for cloud init
+    wget https://repo.almalinux.org/almalinux/10/cloud/x86_64/images/AlmaLinux-10-GenericCloud-latest.x86_64.qcow2
       
     
 
