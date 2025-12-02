@@ -17,7 +17,7 @@ If you are here to follow a full end-to-end setup, read the files in that order:
 Quick links
 - Proxmox guide: ./docs/PROXMOX_SETUP.md
 - TrueNAS guide: ./docs/TRUENAS_SETUP.md
-- Kubernetes guide: ./docs/KUBERNETES_SETUP.md
+- DOCKER guide: ./docs/PORTAINER(DOCKER)_SETUP.md
 
 Why follow this guide
 - Consolidates best practices for Proxmox + TrueNAS + Kubernetes.
