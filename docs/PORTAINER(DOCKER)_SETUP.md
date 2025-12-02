@@ -1,6 +1,7 @@
-# Kubernetes — Deployment and Storage Integration
+# DOCKER — Deployment and Storage Integration
 
-This document covers recommended Kubernetes deployment strategies on top of Proxmox VMs with TrueNAS providing persistent storage. It provides step-by-step options (kubeadm for upstream k8s or k3s for lightweight), networking/CNI guidance, storage integration, and common troubleshooting.
+This document covers recommended docker deployment strategies on top of Proxmox VMs with TrueNAS providing persistent storage. It provides step-by-step options , networking/CNI guidance, storage integration, and common troubleshooting.
+
 # first install debian
   - click https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.2.0-amd64-netinst.iso
   - create vm in proxmox
