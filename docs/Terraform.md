@@ -11,6 +11,7 @@
     pveum user token add terraform@pve provider --privsep=0
 
 ## set up terraform with this template from https://github.com/Thirdbot/proxmox-terraform
+  ## in powershell
   ## create ssh key gen
     ssh-keygen
   ## check key activation
@@ -19,7 +20,6 @@
     Set-Service ssh-agent -StartupType Automatic
     Start-Service ssh-agent
   ## set root password (the same password for login as root in proxmox)
-    #in powershell
       $env:TF_VAR_proxmox_password="example password"
   ## configure file variables.
     # after that run
