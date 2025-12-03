@@ -34,7 +34,8 @@ Create a ZFS pool and datasets
 - In the GUI, Storage → Pools → Add
 - Select disks (use correct topology: RAIDZ, mirror, or stripe depending on redundancy needs)
 - Create datasets and configure permissions for Kubernetes storage classes.
-
+Mount folder
+   New-PSDrive -Name Z -PSProvider FileSystem -Root "\\10.0.23.128\truenas_nfs" -Persist 
 Topology errors when adding disks
 - Symptom: “Topology error” or disk not writable
 - Causes & fixes:
