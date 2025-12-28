@@ -134,6 +134,8 @@ This document describes a robust procedure to install Proxmox VE, create a clust
   - Follow Proxmox docs to force quorum when necessary:
     pvecm expected 1
   - Re-add missing nodes once they are healthy.
+# 7) in case pve/data failed due to storage not have enough space
+  - lvchange --thinpool pve/data --monitor y
 
 References
 - Official Proxmox docs: https://pve.proxmox.com/wiki/Main_Page
